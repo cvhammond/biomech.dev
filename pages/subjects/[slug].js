@@ -9,10 +9,11 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 export default function topicPage({ slug, posts, postTopics}) {
+    const pageTitle = `${slug} - biomech.dev`
   return (
     <Layout>
       <Head>
-        <title>{slug} - biomech.dev</title>
+        <title>{pageTitle}</title>
       </Head>
       <TopMenu postTopics={postTopics} />
       <div className="post-header">
@@ -22,12 +23,12 @@ export default function topicPage({ slug, posts, postTopics}) {
       <main>
       <dl>
       {Object.entries(posts).map(([title, data]) => (
-          <>
-        <dt key={title}>
-          <Link className="post-link" href={data.slug}> {title} </Link>
+          <div key={title} >
+        <dt>
+          <Link className="post-link" href={'/' + data.slug}> {title} </Link>
         </dt>
           <dd><span className="post-description">{data.description}</span></dd>
-          </>
+          </div>
         ))}
       </dl>
       </main>

@@ -22,9 +22,9 @@ export default function Index({ posts, postTopics }) {
       </div>
       <main>
       {postTopics.map((topic) => (
-          <div className="topic-button-container">
+          <div key={topic} className="topic-button-container">
           <Link href={`/subjects/${topic.toLowerCase()}`}>
-          <button key={topic} className="topic-button" >
+          <button className="topic-button" >
           {topic}
           </button>
           </Link>
@@ -32,8 +32,8 @@ export default function Index({ posts, postTopics }) {
         ))}
       <dl>
         {posts.map((post) => (
-            <>
-          <dt key={post.filePath}>
+            <div key={post.filePath}>
+          <dt>
             <Link
                 href={`/${post.filePath.replace(/\.md?$/, '').toLowerCase()}`}
             >
@@ -41,7 +41,7 @@ export default function Index({ posts, postTopics }) {
             </Link>
           </dt>
             <dd><span className="post-description">{post.data.description}</span></dd>
-            </>
+            </div>
         ))}
       </dl>
       </main>

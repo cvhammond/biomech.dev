@@ -16,10 +16,11 @@ const components = {
 }
 
 export default function PostPage({ source, frontMatter, postTopics}) {
+    const pageTitle = `${frontMatter.title} - biomech.dev`
   return (
     <Layout>
       <Head>
-      <title>{frontMatter.title} - biomech.dev</title>
+      <title>{pageTitle}</title>
       </Head>
       <TopMenu postTopics={postTopics} />
       <div className="post-header">

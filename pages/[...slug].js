@@ -21,6 +21,7 @@ export default function PostPage({ source, frontMatter, postTopics}) {
     <Layout>
       <Head>
       <title>{pageTitle}</title>
+      <meta name="description" content={frontMatter.description} />
       </Head>
       <TopMenu postTopics={postTopics} />
       <div className="post-header">

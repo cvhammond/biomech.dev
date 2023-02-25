@@ -6,13 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "babel-plugin-prismjs": "^2.1.0",
     "eslint": "8.34.0",
     "eslint-config-next": "13.2.1",
+    "gray-matter": "^4.0.3",
     "next": "13.2.1",
+    "next-mdx-remote": "^4.3.0",
+    "next-sitemap": "^3.1.52",
+    "prismjs": "^1.29.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-highlight": "^0.15.0"
   }
 }

@@ -34,7 +34,7 @@ p {
 
 hr {
     margin-bottom: 12px;
-    border: #47435b 1px solid;
+    border: #7171ab 1px solid;
 }
 
 a {
@@ -61,7 +61,7 @@ a:hover {
     display: block;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .social-container a {
@@ -73,11 +73,11 @@ a:hover {
     margin: 0 auto;
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #47435b;
+    color: #7171ab;
 }
 
 .license-container a {
-    color: #47435b;
+    color: #7171ab;
     text-decoration: underline;
 }
 

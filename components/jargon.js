@@ -4,8 +4,8 @@ import { findSection } from '@/utils/mdxUtils'
 
 const jargonTransform = (term, definition) => {
     const section = findSection(definition.link)
-    const html = `See <a href=/${definition.link}>${definition.name}</a>
-        ` + (section ? `in the <a href=/subjects/${section.toLowerCase()}>${section} section</a>` : ``)
+    const html = `See <a href=/${section.toLowerCase() + '/'}${definition.link} target=_blank>${definition.name}</a>
+        ` + (section ? `in the <a href=/subjects/${section.toLowerCase()} target=_blank>${section} section</a>` : ``)
  return `<span class="jargon-term">${term}<span class="jargon-info">${html}</span></span>`
 }
 

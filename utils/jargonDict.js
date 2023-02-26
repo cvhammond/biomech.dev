@@ -4,7 +4,7 @@ const jargonDictionary = (slug) => {
     'ai': {link: 'artificial-intelligence', name: 'Artificial Intelligence'},
 }
 for (const key in dictionary) {
-    if (dictionary[key] === slug) {
+    if (dictionary[key].link === slug) {
         delete dictionary[key]
         break
     }

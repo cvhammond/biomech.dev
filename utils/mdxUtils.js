@@ -56,8 +56,6 @@ export function includesMarkdownSymbol(symbol) {
 
 export function findSection(slug) {
     for (const post of postFilePaths) {
-        console.log(post.split('/')[0])
-
         if (post.split('/')[1].replace('.md', '') === slug) {
             return post.split('/')[0]
         }

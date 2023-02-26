@@ -13,6 +13,19 @@ body {
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
+
+h1 .header-link, h2 .header-link, h3 .header-link, h4 .header-link, h5 .header-link, h6 .header-link{
+    visibility: hidden;
+}
+
+h1:hover .header-link, h2:hover .header-link, h3:hover .header-link, h4:hover .header-link, h5:hover .header-link, h6:hover .header-link {
+    visibility: visible;
+}
+
+.header-link {
+    margin-left: 0.5rem;
+}
+
 h1,
 p {
     margin-bottom: 1.5rem;
@@ -43,10 +56,12 @@ a {
 
 a:link {
     color: #8dff82;
+    fill: #8dff82;
 }
 
 a:visited {
    color: #9781fd;
+   fill: #9781fd;
 }
 
 a:hover {
@@ -180,3 +195,38 @@ main {
 
 /* Change the background color of the topmenu button when the dropdown content is shown */
 .menubtn:hover {background-color: #47435b;}
+
+.jargon-term {
+  text-decoration: underline dotted #81ffeb;
+}
+.jargon-term::after {
+  content: "?";
+  font-weight: bold;
+  display: inline-block;
+  transform: translate(0, -0.5em);
+  font-size: 75%;
+  color: #81ffeb;
+  margin-left: 3px;
+}
+.jargon-term:hover {
+  position: relative;
+  text-decoration: none;
+  cursor: help;
+}
+.jargon-term .jargon-info {
+  display: none
+}
+.jargon-term:hover .jargon-info {
+  display: block;
+  position: absolute;
+  top: 1.0em;
+  left: 0;
+  background: #2b2640;
+  border: 1px solid #81ffeb;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 90%;
+  min-width: 250px;
+  max-width: 450px;
+  z-index: 1;
+}

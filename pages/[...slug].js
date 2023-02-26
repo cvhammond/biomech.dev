@@ -13,9 +13,24 @@ import Head from 'next/head'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { getTitleAndDescription } from '@/utils/mdxUtils'
+import Link from '@/components/MarkdownLink'
+import rehypeSlug from 'rehype-slug'
+import { h1Link, h2Link, h3Link, h4Link, h5Link, h6Link } from '@/components/HeaderLink'
+import rehypeCitation from 'rehype-citation'
+import remarkGfm from 'remark-gfm'
+import jargon from '@/components/jargon'
+import jargonDictionary from '@/utils/jargonDict'
+
+const bibliography = "public/references.bib"
 
 const components = {
-    h1: (props) => <h1 className="post-header" {...props} />,
+    h1: h1Link,
+    h2: h2Link,
+    h3: h3Link,
+    h4: h4Link,
+    h5: h5Link,
+    h6: h6Link,
+    a: Link,
     code: Code
 }
 
@@ -40,14 +55,21 @@ export const getStaticProps = async ({ params }) => {
         const slugArray = post.replace('.md', '').split('/')
             .map((part) => part.toLowerCase())
         if(arraysEqual(slugArray, params.slug)) {
-
     const postFilePath = path.join(POSTS_PATH, post)
   const source = fs.readFileSync(postFilePath)
-  const { content } = matter(source)
+  let { content } = matter(source)
+    if (content.includes(' @') || content.includes('[@')) {
+        content = content + '\n\n ## References \n\n'
+    }
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex],
+      remarkPlugins: [remarkMath, remarkGfm],
+      rehypePlugins: [
+          [rehypeCitation, {bibliography, linkCitations: true, }],
+          rehypeKatex,
+          rehypeSlug,
+          [jargon, {jargon: jargonDictionary(params.slug[params.slug.length - 1])}],
+      ],
     },
   })
     const data = getTitleAndDescription(content)

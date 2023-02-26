@@ -33,13 +33,10 @@ export function getTitleAndDescription(content) {
     let title = ''
     let description = ''
     for (const line of content.split('\n')) {
-        console.log(line)
         if (line.startsWith('# ')) {
             title = line.replace('# ', '')
         }
         const startSymbol = line.split(' ')[0]
-        console.log(startSymbol)
-        console.log(includesMarkdownSymbol(startSymbol))
         if (startSymbol && !includesMarkdownSymbol(startSymbol)) {
             // keep first 140 characters
             description = line.substring(0, 140)
@@ -56,3 +53,14 @@ export function includesMarkdownSymbol(symbol) {
     // return true if any markdownSymbols are in the symbol
     return markdownSymbols.some((s) => symbol.includes(s))
 }
+
+export function findSection(slug) {
+    for (const post of postFilePaths) {
+        console.log(post.split('/')[0])
+
+        if (post.split('/')[1].replace('.md', '') === slug) {
+            return post.split('/')[0]
+        }
+    }
+}
+

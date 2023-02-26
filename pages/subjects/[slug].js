@@ -7,6 +7,7 @@ import TopMenu from '@/components/TopMenu'
 import { postTopics, postFilePaths, POSTS_PATH } from '@/utils/mdxUtils'
 import Link from 'next/link'
 import Head from 'next/head'
+import { getTitleAndDescription } from '@/utils/mdxUtils'
 
 export default function topicPage({ slug, posts, postTopics}) {
     const pageTitle = `${slug} - biomech.dev`
@@ -45,14 +46,14 @@ export const getStaticProps = async ({ params }) => {
                 slug = post.split('/')[0]
             }
             const source = fs.readFileSync(path.join(POSTS_PATH, post))
-            const { content, data } = matter(source)
+            const { content } = matter(source)
             await serialize(content, {
                 mdxOptions: {
                     remarkPlugins: [],
                     rehypePlugins: [],
                 },
-                scope: data,
             })
+            const data = getTitleAndDescription(content)
             if (data.title) {
                 posts[data.title] = {
                     description: data.description ?? '',
@@ -79,3 +80,5 @@ export const getStaticPaths = async () => {
     fallback: false,
 }
 }
+
+

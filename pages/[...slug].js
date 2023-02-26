@@ -12,8 +12,10 @@ import { arraysEqual } from '@/utils/arrayUtils'
 import Head from 'next/head'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import { getTitleAndDescription } from '@/utils/mdxUtils'
 
 const components = {
+    h1: (props) => <h1 className="post-header" {...props} />,
     code: Code
 }
 
@@ -26,13 +28,6 @@ export default function PostPage({ source, frontMatter, postTopics}) {
       <meta name="description" content={frontMatter.description} />
       </Head>
       <TopMenu postTopics={postTopics} />
-      <div className="post-header">
-        <h1 className="title">{frontMatter.title}</h1>
-        {frontMatter.description && (
-          <p className="description">{frontMatter.description}</p>
-        )}
-      <hr/>
-      </div>
       <main>
         <MDXRemote {...source} components={components} />
       </main>
@@ -48,14 +43,14 @@ export const getStaticProps = async ({ params }) => {
 
     const postFilePath = path.join(POSTS_PATH, post)
   const source = fs.readFileSync(postFilePath)
-  const { content, data } = matter(source)
+  const { content } = matter(source)
   const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [remarkMath],
       rehypePlugins: [rehypeKatex],
     },
-    scope: data,
   })
+    const data = getTitleAndDescription(content)
   return {
     props: {
       source: mdxSource,

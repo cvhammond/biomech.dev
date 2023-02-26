@@ -28,3 +28,31 @@ export const postTopics = () => {
     })
     return [...new Set(topics.filter((topic) => !topic.endsWith('.md')))]
 }
+
+export function getTitleAndDescription(content) {
+    let title = ''
+    let description = ''
+    for (const line of content.split('\n')) {
+        console.log(line)
+        if (line.startsWith('# ')) {
+            title = line.replace('# ', '')
+        }
+        const startSymbol = line.split(' ')[0]
+        console.log(startSymbol)
+        console.log(includesMarkdownSymbol(startSymbol))
+        if (startSymbol && !includesMarkdownSymbol(startSymbol)) {
+            // keep first 140 characters
+            description = line.substring(0, 140)
+        }
+        if (title && description) {
+            break
+        }
+    }
+    return { title, description }
+}
+
+export function includesMarkdownSymbol(symbol) {
+    const markdownSymbols = ['*', '-', '#', '>', '!', '[', '(', '`', '$']
+    // return true if any markdownSymbols are in the symbol
+    return markdownSymbols.some((s) => symbol.includes(s))
+}

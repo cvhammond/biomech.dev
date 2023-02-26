@@ -7,6 +7,7 @@ import { postFilePaths, POSTS_PATH } from '../utils/mdxUtils'
 import { postTopics } from '../utils/mdxUtils'
 import TopMenu from '../components/TopMenu'
 import Head from 'next/head'
+import { getTitleAndDescription } from '../utils/mdxUtils'
 
 export default function Index({ posts, postTopics }) {
   return (
@@ -31,7 +32,7 @@ export default function Index({ posts, postTopics }) {
           </div>
         ))}
       <dl>
-        {posts.map((post) => (
+      {Object.values(posts).map((post) => (
             <div key={post.filePath}>
           <dt>
             <Link
@@ -50,17 +51,13 @@ export default function Index({ posts, postTopics }) {
 }
 
 export function getStaticProps() {
-  const posts = postFilePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(POSTS_PATH, filePath))
-    const { content, data } = matter(source)
-
-    return {
-      content,
-      data,
-      filePath,
+    let posts = {}
+    for (const post of postFilePaths) {
+        const source = fs.readFileSync(path.join(POSTS_PATH, post))
+        const { content } = matter(source)
+        const data = getTitleAndDescription(content)
+        posts[post] = { data,filePath: post}
     }
-  })
-
   return { props: { posts, postTopics: postTopics()} }
 }
 

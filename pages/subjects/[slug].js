@@ -47,12 +47,6 @@ export const getStaticProps = async ({ params }) => {
             }
             const source = fs.readFileSync(path.join(POSTS_PATH, post))
             const { content } = matter(source)
-            await serialize(content, {
-                mdxOptions: {
-                    remarkPlugins: [],
-                    rehypePlugins: [],
-                },
-            })
             const data = getTitleAndDescription(content)
             if (data.title) {
                 posts[data.title] = {

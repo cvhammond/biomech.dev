@@ -8,7 +8,7 @@ const Footer = () => {
         <footer>
         <hr/>
         <div className="social-container">
-        <Link href="https://twitter.com/cvhammond"><Image src="/twitter.svg" alt="Twitter" width="32" height="32"/></Link>
+        <Link href="https://twitter.com/cvhammond_"><Image src="/twitter.svg" alt="Twitter" width="32" height="32"/></Link>
         <Link href="https://github.com/cvhammond"><Image src="/github.svg" alt="GitHub" width="32" height="32"/></Link>
         <Link href="mailto:claire@biomech.dev"><Image src="/email.svg" alt="Email" width="32" height="32"/></Link>
         </div>

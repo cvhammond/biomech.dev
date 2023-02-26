@@ -16,3 +16,7 @@ function out = calcSquare(num)
     out = num .* num;
 end
 ```
+
+$$
+a = b + c
+$$

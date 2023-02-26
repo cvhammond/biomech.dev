@@ -24,7 +24,6 @@ export default function PostPage({ source, frontMatter, postTopics}) {
       <Head>
       <title>{pageTitle}</title>
       <meta name="description" content={frontMatter.description} />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous"/>
       </Head>
       <TopMenu postTopics={postTopics} />
       <div className="post-header">

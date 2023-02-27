@@ -5,7 +5,12 @@ export default function Code(params) {
     useEffect(() => {
         Prism.highlightAll()
     }, [])
-  return (
+    const isInline = !params.children.includes('\n')
+    if (isInline) {
+      return (<code className={"language-js"}>{params.children}</code>)
+    }
+    else {
+    return (
     <div className="Code">
       <pre>
         <div><code>{languageCodeToName[params.className]}</code></div>
@@ -13,7 +18,8 @@ export default function Code(params) {
         <code className={params.className}>{params.children}</code>
       </pre>
     </div>
-  )
+    )
+    }
 }
 
 const languageCodeToName = {

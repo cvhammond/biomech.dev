@@ -1,0 +1,75 @@
+PMID- 25893160
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20230118
+IS  - 2210-9838 (Print)
+IS  - 2210-9838 (Electronic)
+VI  - 2
+DP  - 2011
+TI  - OpenSim: a musculoskeletal modeling and simulation framework for in silico 
+      investigations and exchange.
+PG  - 212-232
+AB  - Movement science is driven by observation, but observation alone cannot elucidate 
+      principles of human and animal movement. Biomechanical modeling and computer 
+      simulation complement observations and inform experimental design. Biological 
+      models are complex and specialized software is required for building, validating, 
+      and studying them. Furthermore, common access is needed so that investigators can 
+      contribute models to a broader community and leverage past work. We are 
+      developing OpenSim, a freely available musculoskeletal modeling and simulation 
+      application and libraries specialized for these purposes, by providing: 
+      musculoskeletal modeling elements, such as biomechanical joints, muscle 
+      actuators, ligament forces, compliant contact, and controllers; and tools for 
+      fitting generic models to subject-specific data, performing inverse kinematics 
+      and forward dynamic simulations. OpenSim performs an array of physics-based 
+      analyses to delve into the behavior of musculoskeletal models by employing 
+      Simbody, an efficient and accurate multibody system dynamics code. Models are 
+      publicly available and are often reused for multiple investigations because they 
+      provide a rich set of behaviors that enables different lines of inquiry. This 
+      report will discuss one model developed to study walking and applied to gain 
+      deeper insights into muscle function in pathological gait and during running. We 
+      then illustrate how simulations can test fundamental hypotheses and focus the 
+      aims of in vivo experiments, with a postural stability platform and human model 
+      that provide a research environment for performing human posture experiments in 
+      silico. We encourage wide adoption of OpenSim for community exchange of 
+      biomechanical models and methods and welcome new contributors.
+FAU - Seth, Ajay
+AU  - Seth A
+AD  - Bioengineering, Stanford University, Stanford, CA, USA.
+FAU - Sherman, Michael
+AU  - Sherman M
+AD  - Bioengineering, Stanford University, Stanford, CA, USA.
+FAU - Reinbolt, Jeffrey A
+AU  - Reinbolt JA
+AD  - Mechanical, Aerospace, & Biomedical Engineering, The University of Tennessee, 
+      Knoxville, TN, USA.
+FAU - Delp, Scott L
+AU  - Delp SL
+AD  - Bioengineering, Stanford University, Stanford, CA, USA ; Mechanical Engineering, 
+      Stanford University, Stanford, CA, USA.
+LA  - eng
+GR  - R24 HD065690/HD/NICHD NIH HHS/United States
+GR  - U54 GM072970/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+PL  - Netherlands
+TA  - Procedia IUTAM
+JT  - Procedia IUTAM
+JID - 101570878
+PMC - PMC4397580
+MID - NIHMS641742
+OTO - NOTNLM
+OT  - SimTK Simbody
+OT  - Simbios biocomputation
+OT  - biological joints
+OT  - gait simulation
+OT  - musculotendinous actuators
+OT  - neuromuscular control
+OT  - neuromusculoskeletal biomechanics
+EDAT- 2011/01/01 00:00
+MHDA- 2011/01/01 00:01
+CRDT- 2015/04/21 06:00
+PHST- 2015/04/21 06:00 [entrez]
+PHST- 2011/01/01 00:00 [pubmed]
+PHST- 2011/01/01 00:01 [medline]
+AID - 10.1016/j.piutam.2011.04.021 [doi]
+PST - ppublish
+SO  - Procedia IUTAM. 2011;2:212-232. doi: 10.1016/j.piutam.2011.04.021.

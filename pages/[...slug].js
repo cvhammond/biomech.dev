@@ -20,6 +20,7 @@ import rehypeCitation from 'rehype-citation'
 import remarkGfm from 'remark-gfm'
 import jargon from '@/components/jargon'
 import jargonDictionary from '@/utils/jargonDict'
+import autolink from '@/utils/autolink'
 
 const bibliography = "public/references.bib"
 
@@ -69,6 +70,7 @@ export const getStaticProps = async ({ params }) => {
           rehypeKatex,
           rehypeSlug,
           [jargon, {jargon: jargonDictionary(params.slug[params.slug.length - 1])}],
+          autolink,
       ],
     },
   })
@@ -91,7 +93,7 @@ export const getStaticPaths = async () => {
     .map((slug) => ({ params:
         { slug: slug.map((part) => part.toLowerCase())}
     }))
-    
+
   return {
     paths,
     fallback: false,

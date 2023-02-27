@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node bib.mjs && next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "bib": "node bib.mjs"
   },
   "dependencies": {
     "babel-plugin-prismjs": "^2.1.0",

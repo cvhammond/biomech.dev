@@ -4,13 +4,13 @@ OpenSim is an open source software package published by Stanford University to f
 
 ## Background
 
-OpenSim was first published in 2011 by [@Seth2011] with the expressed purpose of providing a framework for biomechanical modeling. The original 2011 paper even states "we encourage wide adoption... for community exchange"[^1]. In all, It represents a unification and codification of a variety of disparate algorithms and techniques in biomechanics into a shared physics-based modeling space with common variables, data formats, and validity.
+OpenSim was first published by @Seth2011 with the expressed purpose of providing a framework for biomechanical modeling. The original 2011 paper even states "we encourage wide adoption... for community exchange"[^1]. In all, It represents a unification and codification of a variety of disparate algorithms and techniques in biomechanics into a shared physics-based modeling space with common variables, data formats, and validity.
 
 [^1]: Interestingly, OpenSim was originally published under the [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/) (no commercial, no derivative works), but has since moved to [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.html) (do whatever you want, we aren't liable).
 
 ## Getting Started
 
-The easiest way to use OpenSim is through their [automated installers for Windows and Mac](https://simtk.org/frs/?group_id=91). You unfortunately have to make an account on SimTK to download. 
+The easiest way to use OpenSim is through their [automated installers for Windows and Mac](https://simtk.org/frs/?group_id=91). You unfortunately have to make an account on SimTK to download.
 
 If you prefer to build from source, you can follow the directions found here for a set of [auto-install script](https://github.com/opensim-org/opensim-core/wiki/Build-Instructions) that works fairly well for Windows, Mac, and Linux. If you want a pre-built latest version (perhaps for Linux users), [see here](#using-the-pre-built-api-only-latest-version).
 

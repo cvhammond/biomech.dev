@@ -56,7 +56,7 @@ export function getStaticProps() {
         const source = fs.readFileSync(path.join(POSTS_PATH, post))
         const { content } = matter(source)
         const data = getTitleAndDescription(content)
-        posts[post] = { data,filePath: post}
+        posts[post] = { data, filePath: post}
     }
   return { props: { posts, postTopics: postTopics()} }
 }

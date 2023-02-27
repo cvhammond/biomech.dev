@@ -4,35 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "d99569e984c20467",
+        "id": "3bc4e7193dd24dc3",
         "type": "tabs",
         "children": [
           {
-            "id": "d5e13254d38197af",
+            "id": "35ccf2e139ed5fef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test/test2.md",
+                "file": "OpenSim/introduction.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f29ff1ee6744e497",
+            "id": "0a5c1e7abb1248db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "my-first-real-note.md",
+                "file": "OpenSim/introduction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6e717923c16a0b63",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technology/matlab.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "aa14f82ec470c97f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technology/matlab.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -98,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "my-first-real-note.md",
+                "file": "Technology/matlab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "my-first-real-note.md",
+                "file": "Technology/matlab.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "my-first-real-note.md"
+                "file": "Technology/matlab.md"
               }
             }
           }
@@ -159,9 +183,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f29ff1ee6744e497",
+  "active": "aa14f82ec470c97f",
   "lastOpenFiles": [
+    "Technology/python.md",
+    "Technology/matlab.md",
+    "OpenSim/introduction.md",
+    "Technology",
+    "MATLAB",
     "OpenSim/your-first-opensim-program.md",
+    "Terminology/operating-system.md",
+    "Terminology",
+    "().md",
+    "Technology/artificial-intelligence.md",
+    "OpenSim/simbody.md",
+    "OpenSim/simtk.md",
     "OpenSim",
     "4913",
     "test-note.md",

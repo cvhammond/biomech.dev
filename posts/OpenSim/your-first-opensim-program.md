@@ -1,4 +1,3 @@
-
 # First heading
 
 This is an example post that I want to make to see how it goes.

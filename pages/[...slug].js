@@ -91,7 +91,7 @@ export const getStaticPaths = async () => {
     .map((slug) => ({ params:
         { slug: slug.map((part) => part.toLowerCase())}
     }))
-
+    
   return {
     paths,
     fallback: false,

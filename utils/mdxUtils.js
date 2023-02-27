@@ -15,7 +15,10 @@ function walkSync (dir, filelist = []) {
             else throw err;
         }
     });
-    return filelist.filter(file => file.endsWith('.md')).map(file => file.replace(POSTS_PATH, ''));
+    return filelist
+        .filter(file => file.endsWith('.md'))
+        .map(file => file.replace(POSTS_PATH, ''))
+        .map(file => file.replace(/\\/g, '/'))
 }
 
 // postFilePaths is the list of all mdx files inside the POSTS_PATH directory
@@ -37,9 +40,14 @@ export function getTitleAndDescription(content) {
             title = line.replace('# ', '')
         }
         const startSymbol = line.split(' ')[0]
-        if (startSymbol && !includesMarkdownSymbol(startSymbol)) {
-            // keep first 140 characters
-            description = line.substring(0, 140)
+        if (startSymbol.trim() && !includesMarkdownSymbol(startSymbol)) {
+            // remove markdown symbols
+            const newLine = line.replace(/[#-*>`$]/g, '')
+            // keep first 160 characters
+            if(newLine.length > 160)
+            description = newLine.substring(0, 157) + '...'
+            else
+            description = newLine.substring(0, 160)
         }
         if (title && description) {
             break

@@ -21,7 +21,7 @@ export default (options) => {
     const findJargon = (node) => {
         const jargon = Object.keys(options.jargon)
         for(let i = 0; i < jargon.length; i++) {
-            if(node.value.toLowerCase().match(new RegExp(`\\b${jargon[i]}\\b`))) {
+            if(node.value && node.value.toLowerCase().match(new RegExp(`\\b${jargon[i]}\\b`))) {
                 const index = node.value.toLowerCase().indexOf(jargon[i])
                 const termTree = fromHtml(
                     options.transform(

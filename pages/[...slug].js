@@ -21,6 +21,7 @@ import remarkGfm from 'remark-gfm'
 import jargon from '@/components/jargon'
 import jargonDictionary from '@/utils/jargonDict'
 import autolink from '@/utils/autolink'
+import codeTitle from '@/utils/codeTitle'
 
 const bibliography = "public/references.bib"
 
@@ -35,68 +36,69 @@ const components = {
     code: Code
 }
 
-export default function PostPage({ source, frontMatter, postTopics}) {
+export default function PostPage({ source, frontMatter, postTopics }) {
     const pageTitle = `${frontMatter.title} - biomech.dev`
-  return (
-    <Layout>
-      <Head>
-      <title>{pageTitle}</title>
-      <meta name="description" content={frontMatter.description} />
-      </Head>
-      <TopMenu postTopics={postTopics} />
-      <main>
-        <MDXRemote {...source} components={components} />
-      </main>
-    </Layout>
-  )
+    return (
+        <Layout>
+            <Head>
+                <title>{pageTitle}</title>
+                <meta name="description" content={frontMatter.description} />
+            </Head>
+            <TopMenu postTopics={postTopics} />
+            <main>
+                <MDXRemote {...source} components={components} />
+            </main>
+        </Layout>
+    )
 }
 
 export const getStaticProps = async ({ params }) => {
     for (const post of postFilePaths) {
         const slugArray = post.replace('.md', '').split('/')
             .map((part) => part.toLowerCase())
-        if(arraysEqual(slugArray, params.slug)) {
-    const postFilePath = path.join(POSTS_PATH, post)
-  const source = fs.readFileSync(postFilePath)
-  let { content } = matter(source)
-    if (content.includes(' @') || content.includes('[@')) {
-        content = content + '\n\n ## References \n\n'
-    }
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      remarkPlugins: [remarkMath, remarkGfm],
-      rehypePlugins: [
-          [rehypeCitation, {bibliography, linkCitations: true, }],
-          rehypeKatex,
-          rehypeSlug,
-          [jargon, {jargon: jargonDictionary(params.slug[params.slug.length - 1])}],
-          autolink,
-      ],
-    },
-  })
-    const data = getTitleAndDescription(content)
-  return {
-    props: {
-      source: mdxSource,
-      frontMatter: data,
-        postTopics: postTopics(),
-    },
-  }
+        if (arraysEqual(slugArray, params.slug)) {
+            const postFilePath = path.join(POSTS_PATH, post)
+            const source = fs.readFileSync(postFilePath)
+            let { content } = matter(source)
+            if (content.includes(' @') || content.includes('[@')) {
+                content = content + '\n\n ## References \n\n'
+            }
+            const mdxSource = await serialize(content, {
+                mdxOptions: {
+                    remarkPlugins: [remarkMath, remarkGfm, codeTitle],
+                    rehypePlugins: [
+                        [rehypeCitation, { bibliography, linkCitations: true, }],
+                        rehypeKatex,
+                        rehypeSlug,
+                        [jargon, { jargon: jargonDictionary(params.slug[params.slug.length - 1]) }],
+                        autolink,
+                    ],
+                },
+            })
+            const data = getTitleAndDescription(content)
+            return {
+                props: {
+                    source: mdxSource,
+                    frontMatter: data,
+                    postTopics: postTopics(),
+                },
+            }
         }
     }
 }
 
 export const getStaticPaths = async () => {
     const paths = postFilePaths
-    .map((path) => path.replace(/\.md?$/, ''))
-    .map((slug) => slug.split('/'))
-    .map((slug) => ({ params:
-        { slug: slug.map((part) => part.toLowerCase())}
-    }))
+        .map((path) => path.replace(/\.md?$/, ''))
+        .map((slug) => slug.split('/'))
+        .map((slug) => ({
+            params:
+                { slug: slug.map((part) => part.toLowerCase()) }
+        }))
 
-  return {
-    paths,
-    fallback: false,
-  }
+    return {
+        paths,
+        fallback: false,
+    }
 }
 

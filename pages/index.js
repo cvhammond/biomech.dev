@@ -17,7 +17,7 @@ export default function Index({ posts, postTopics }) {
       </Head>
       <TopMenu postTopics={postTopics}/>
       <div className="post-header">
-        <h1 className="title">biomech.dev</h1>
+        <h1 className="title"><samp>biomech.dev</samp></h1>
           <p className="description">Information about biomechanics software</p>
       <hr/>
       </div>

@@ -18,7 +18,6 @@ const autolink = (options) => {
 export default autolink
 
 const findLinks = (node) => {
-    console.log(node)
     if (node.value.match(/https?:\/\/[^\s]+/)) {
         const links = node.value.match(/https?:\/\/[^\s]+/g)
         const linkTree = fromHtml(

@@ -2970,6 +2970,13 @@ rehype-slug@^5.1.0:
     unified "^10.0.0"
     unist-util-visit "^4.0.0"
 
+remark-code-title@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/remark-code-title/-/remark-code-title-0.2.5.tgz#3710cc6bc24cf115be15624f690453f3189594db"
+  integrity sha512-6tIhdZdECMM0EQk3eDFxUQn/97VKKmo7JkCwfg/mkJaZZBwH+cbP0UDRslOqqzLcueakPZ8q7Gtj5KtGB/jufw==
+  dependencies:
+    unist-util-visit "^4.1.1"
+
 remark-gfm@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/remark-gfm/-/remark-gfm-3.0.1.tgz#0b180f095e3036545e9dddac0e8df3fa5cfee54f"
@@ -3430,7 +3437,7 @@ unist-util-visit-parents@^5.0.0, unist-util-visit-parents@^5.1.1:
     "@types/unist" "^2.0.0"
     unist-util-is "^5.0.0"
 
-unist-util-visit@^4.0.0, unist-util-visit@^4.1.2:
+unist-util-visit@^4.0.0, unist-util-visit@^4.1.1, unist-util-visit@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-4.1.2.tgz#125a42d1eb876283715a3cb5cceaa531828c72e2"
   integrity sha512-MSd8OUGISqHdVvfY9TPhyK2VdUrPgxkUtWSuMHF6XAAFuL4LokseigBnZtPnJMu+FbynTkFNnFlyjxpVKujMRg==

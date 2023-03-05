@@ -48,6 +48,7 @@ p {
 hr {
     margin-bottom: 12px;
     border: #7171ab 1px solid;
+    clear: both;
 }
 
 a {
@@ -65,7 +66,45 @@ a:visited {
 }
 
 a:hover {
-    color: #ff81c0;
+    color: #7a71ab;
+}
+
+.code-meta {
+    float: right;
+    margin-left: 16px;
+}
+
+.copy-button {
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top: -8px;
+    margin-right: -4px;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.copy-button:active{
+    background-color: #22212c;
+}
+
+.language-text {
+    font-size: 14px;
+    color: #7171ab !important;
+    line-height: 1.0 !important;
+    padding-right: 8px !important;
+}
+
+.code-title{
+    all: initial;
+    font-size: 14px;
+    width: 100%;
+    font: inherit !important;
+    margin-right: 12px;
+    color: #7171ab !important;
+}
+
+.code-title {
+
 }
 
 .title {

@@ -1,26 +1,61 @@
-# First heading
+# First Heading
+## Second Heading
+### Third Heading
+#### Fourth Heading
+##### Fifth Heading
+###### Sixth Heading
 
-This is an example post that I want to make to see how it goes.
+*italicized*
 
-This is another[^1] sentence.
+**bold**
 
-## First sub-heading
+***bold and italic***
 
-[^1]: Test reference @HACK2023111481
+~~test strikethrough~~
 
+> blockquote
 
-what about ai -ml or another word like that?
-
-```matlab
-function out = calcSquare(num)
-    out = num .* num;
-end
+`code`
+```matlab test.m is a test example that we are using to illustrate
+test = beginTest(number)
+test.begin()
+% test
 ```
 
+1. First Item
+2. Second Item
+3. Third Item
+
+- First Item
+- Second Item
+- Third Item
+
+- [x] text
+- [x] text
+- [ ] text
+
+
+inline $x^{2}$
+
 $$
-a = b + c
+x^{2}
 $$
+
+----------
+
+this is an example [Page Content](link-url)
+
+![alt text](image-url)
+
+footnote[^1]
+
+[^1]: footnote definition
 
 [test](https://github.com/cvhammond)
 [test2](/)
+[test3](#test)
+
+According to @Seth2011
+
+[@Seth2011]
 

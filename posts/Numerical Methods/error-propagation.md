@@ -8,16 +8,20 @@ When describing error propagation, typically the solution is given in terms of a
 
 For functions of a single variable, error can be estimated with the following equation:
 
-`err = abs(f'(x_0)) * (x_1 - x_0)`
+$$
+err = |f'(x_0)| * (x_1 - x_0)
+$$
 
-Where `x_0` is the known measurement and `x_1` is the amount of error. `x_1` ccan be thought of as the uncertainty: "15 inches give or take *0.1 inches*."
+Where $x_0$ is the known measurement and $x_1$ is the amount of error. $x_1$ ccan be thought of as the uncertainty: "15 inches give or take *0.1 inches*."
 
 ## Functions of Multiple Variables
 
 Generalizing this [single variable](#functions-of-a-single-variable) approach, we can simply take the sum of the partial derivative of each variable. For a two variable case, we can use:
 
-`err(u,v) = abs(partial(u)) * (u_1 - u_0) + abs(partial(v)) * (v_1 - v_0)`
+$$
+err(u,v) = |\frac{\partial{f}}{\partial{u}}|(u_1 - u_0) + |\frac{\partial{f}}{\partial{v}}| * (v_1 - v_0)
+$$
 
-Where `u` and `v` are two approximations with uncertainty.
+Where $u$ and $v$ are two approximations with uncertainty.
 
 

@@ -6,14 +6,18 @@ The false position method is sometimes referred to as the **linear interpolation
 
 ## Finding the False Root
 
-The false root is a linear interpolation of the two endpoints, one of which evalutes in `f(x)` to a positive number (`x_p`) and one evaluates to a negative number (`x_n`).
+The false root is a linear interpolation of the two endpoints, one of which evalutes in $f(x)$ to a positive number ($x_p$) and one evaluates to a negative number ($x_n$).
 
 The linear interpolation of a value for which a value is know to both the left and right is:
 
-`(f(x) - f(x_n)) / (x - x_n) = (f(x_p) - f(x_n)) / (x_p - x_n)`
+$$
+\frac{f(x) - f(x_n)}{x - x_n} = \frac{f(x_p) - f(x_n)}{x_p - x_n}
+$$
 
-In this case, `f(x) = 0`, and `x` is `x_r`, the value we are looking for. Rearranging, we get:
+In this case, $f(x) = 0$, and $x$ is $x_r$, the value we are looking for. Rearranging, we get:
 
-`x_r = x_p - (f(x_p) * (x_n - x_p)) / (f(x_n) - f(x_p))`
+$$
+x_r = x_p - \frac{f(x_p) * (x_n - x_p)}{f(x_n) - f(x_p)}
+$$
 
-Once `x_r` is found, we are able to continue with the [bisection method](/bisection-method).
+Once $x_r$ is found, we are able to continue with the [bisection method](/bisection-method).

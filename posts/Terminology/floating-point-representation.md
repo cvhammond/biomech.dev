@@ -4,15 +4,17 @@ When numbers are too large to simply describe in binary (2^63) or when numbers r
 
 Floating point values are generally represented in the following form:
 
+$$
 m * b^e
+$$
 
 where:
 
-- m = mantissa
-- b = base (base_2, base_10, etc.)
-- e = exponent
+- $m$ = mantissa
+- $b$ = base (base_2, base_10, etc.)
+- $e$ = exponent
 
-This form is how numbers are represented in scientific notation (5.48 * 10^3).
+This form is how numbers are represented in scientific notation ($5.48 * 10^3$).
 
 In a computer, floating point numbers are stored in 64 bits by partitioning the first portion to represent the mantissa and the second portion to the exponent; the base is 2 in this situation.
 
@@ -24,7 +26,7 @@ Floating point representation is great because it represents a wide range of val
 
 2. Round-off error is introduced at each operation. Repeated operations of the same resultant values can cause divergence from the *true value*.
 
-3. Not all values can be represented in floating point numbers. The larger the number, the larger the interval between the existing value and the value one above it and one below it. Changing a value in the range of 2^34 by 0.002 will likely not produce the desired representation.
+3. Not all values can be represented in floating point numbers. The larger the number, the larger the interval between the existing value and the value one above it and one below it. Changing a value in the range of $2^{34}$ by $0.002$ will likely not produce the desired representation.
 
 4. Not all systems handle floating point numbers the same. Sometimes significant figures can be lost through algorithms that do not focus on maintaining the significance.
 

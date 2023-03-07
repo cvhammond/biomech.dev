@@ -8,4 +8,4 @@ If you asked two people the temperature outside today and one said "86.3F" and t
 
 ## Exceptions to Significant Figures
 
-Mathematically derived values such as *pi* or *e* do not have a number of significant digits... until they are truncated for computational purposes. This is sometimes referred to as round-off error.
+Mathematically derived values such as $\pi$ or $e$ do not have a number of significant digits... until they are truncated for computational purposes. This is sometimes referred to as round-off error.

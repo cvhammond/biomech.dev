@@ -8,7 +8,9 @@ Simple numerical models give insight into the natural of numerical methods by ge
 
 The model representing Newton's second law of motion is one you have likely already seen:
 
-F = m * a
+$$
+F = ma
+$$
 
 ## Characteristics of Models
 

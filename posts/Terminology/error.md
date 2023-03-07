@@ -27,9 +27,16 @@ Each provide informative meaning to error in the context of different problems.
 
 Computers are not able to represent complex numbers exactly. Because numbers are represented as bits and bytes in computers, non-integers must be approximated, althought generally to a high degree.
 
-Even so, some round-off error exists such that everytime a computation is done using `sqrt(3)`, a small round-off error occurs. Such errors can become significant if many, many, many computations are done during a numerical method or computation.
+This error can be reduced by increasing the number of digits stored in memory for given data.
 
 ## Truncation Error
 
-Instances where approximations are used instead of exact mathematical values cause truncation errors.
+Instances where approximations are used instead of exact mathematical values cause truncation errors. Such errors can become significant if many, many, many computations are done during a numerical method or computation.
 
+See [error propagation](/error-propagation) for more information.
+
+## Total Numerical Error
+
+Total numerical error is the sum of round-off and truncation errors. Interestingly, because round-off errors are related to the number of significant figures, increasing the number of digits stored reduces the error. **But,** when more significant figures are kept, then generally more computations need to be made, thus increasing the truncation error.
+
+There exists a balance point between decreasing round-off error and increasing truncation error that is specific to the model and computational method being used.

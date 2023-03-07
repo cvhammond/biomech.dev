@@ -26,6 +26,8 @@ Background knowledge for numerical methods includes the following:
 
 Areas to be learned and explored are as follows:
 
+### Modeling and Error
+
 - Simple Numerical Models
 - Laws of Conservation
 - Programming for Numerical Methods
@@ -40,5 +42,19 @@ Areas to be learned and explored are as follows:
 - Trade-offs in Numerical Methods
 - Important Formulas in Numerical Methods
 - Advanced Numerical Methods
+
+### Root Finding
+
+- Graphical Methods of Root Finding
+- Bisection Method
+- False Position Method
+- Fixed Point Iteration
+- Newton-Raphson
+- Secant Method
+- Methods for Multiple Roots
+- Root Finding in Nonlinear Systems
+- Methods of Polynomial Root Finding
+- Muller's Method
+- Bairstow's Method
 
 

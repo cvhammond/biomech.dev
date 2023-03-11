@@ -5,7 +5,7 @@ export default function MarkdownLink({ href, children, ...props }) {
     // if internal link, use next/Link
     // else use normal <a> tag with target="_blank" and rel="noopener noreferrer"
     let linkType = 'external'
-    if(href.startsWith('/') && !props.target==='_blank') {
+    if(href.startsWith('/') && !(props.target==='_blank')) {
         linkType = 'internal'
     }
     else if(href.startsWith('#')) {

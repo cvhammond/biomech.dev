@@ -66,12 +66,10 @@ for (let file of bibFiles) {
     let bib = ''
     if (file.endsWith('.bib')) {
         bib = fs.readFileSync(path.join('bibliography', file), 'utf8')
-        console.log(bib)
     }
     if (file.endsWith('.nbib')) {
         bib = fs.readFileSync(path.join('bibliography', file), 'utf8')
         bib = parseNbib(bib)
-        console.log(bib)
     }
     stream.write(bib + '\n')
 }

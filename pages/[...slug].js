@@ -8,7 +8,6 @@ import { postFilePaths, POSTS_PATH } from '@/utils/mdxUtils'
 import TopMenu from '@/components/TopMenu'
 import { postTopics } from '@/utils/mdxUtils'
 import Code from '@/components/Code'
-import { arraysEqual } from '@/utils/arrayUtils'
 import Head from 'next/head'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
@@ -22,6 +21,7 @@ import jargon from '@/components/jargon'
 import jargonDictionary from '@/utils/jargonDict'
 import autolink from '@/utils/autolink'
 import codeTitle from '@/utils/codeTitle'
+import { slugify } from '@/utils/slugify'
 
 const bibliography = "public/references.bib"
 
@@ -53,37 +53,42 @@ export default function PostPage({ source, frontMatter, postTopics }) {
 }
 
 export const getStaticProps = async ({ params }) => {
+    const posts = []
     for (const post of postFilePaths) {
-        const slugArray = post.replace('.md', '').split('/')
-            .map((part) => part.toLowerCase())
-        if (arraysEqual(slugArray, params.slug)) {
-            const postFilePath = path.join(POSTS_PATH, post)
-            const source = fs.readFileSync(postFilePath)
-            let { content } = matter(source)
-            if (content.includes(' @') || content.includes('[@')) {
-                content = content + '\n\n ## References \n\n'
-            }
-            const mdxSource = await serialize(content, {
-                mdxOptions: {
-                    remarkPlugins: [remarkMath, remarkGfm, codeTitle],
-                    rehypePlugins: [
-                        [rehypeCitation, { bibliography, linkCitations: true, }],
-                        rehypeKatex,
-                        rehypeSlug,
-                        [jargon, { jargon: jargonDictionary(params.slug[params.slug.length - 1]) }],
-                        autolink,
-                    ],
-                },
-            })
-            const data = getTitleAndDescription(content)
-            return {
-                props: {
-                    source: mdxSource,
-                    frontMatter: data,
-                    postTopics: postTopics(),
-                },
-            }
+        const slug = slugify(post.replace('.md', '').split('/')[1])
+        if (slug == params.slug[0]) {
+            posts.push(post)
         }
+    }
+    if (posts.length > 1) {
+        throw new Error('More than one post with the same slug')
+    }
+    const post = posts[0]
+    const postFilePath = path.join(POSTS_PATH, post)
+    const source = fs.readFileSync(postFilePath)
+    let { content } = matter(source)
+    if (content.includes(' @') || content.includes('[@')) {
+        content = content + '\n\n ## References \n\n'
+    }
+    const mdxSource = await serialize(content, {
+        mdxOptions: {
+            remarkPlugins: [remarkMath, remarkGfm, codeTitle],
+            rehypePlugins: [
+                [rehypeCitation, { bibliography, linkCitations: true, }],
+                rehypeKatex,
+                rehypeSlug,
+                [jargon, { jargon: jargonDictionary(params.slug[params.slug.length - 1]) }],
+                autolink,
+            ],
+        },
+    })
+    const data = getTitleAndDescription(content)
+    return {
+        props: {
+            source: mdxSource,
+            frontMatter: data,
+            postTopics: postTopics(),
+        },
     }
 }
 
@@ -93,7 +98,7 @@ export const getStaticPaths = async () => {
         .map((slug) => slug.split('/'))
         .map((slug) => ({
             params:
-                { slug: slug.map((part) => part.toLowerCase()) }
+                { slug: [slugify(slug[1])] }
         }))
 
     return {

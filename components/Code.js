@@ -11,11 +11,9 @@ export default function Code(params) {
         return (<code className={"language-js"}>{params.children}</code>)
     }
     else {
-        console.log(params)
         const splitIndex = params.children.indexOf('&')
         const meta = params.children.substring(0, splitIndex)
         const body = params.children.substring(splitIndex + 1)
-        console.log(meta, body)
         return (<>
             <div className="code-meta">
                 <code className="language-text">{languageCodeToName[params.className] ?? params.className.replace('language-', '') ?? ''}</code>

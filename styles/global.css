@@ -190,14 +190,6 @@ main {
     margin-bottom: 24px;
 }
 
-.dark-mode-btn, .dark-mode-btn:hover {
-    padding: 8px;
-}
-
-.dark-mode-btn img {
-    color: #ff0000 !important;
-}
-
 .topmenu {
     position: relative;
     display: inline-block;
@@ -268,4 +260,9 @@ main {
   min-width: 250px;
   max-width: 450px;
   z-index: 1;
+}
+
+.katex {
+    white-space: normal !important;
+    color: #81ffeb !important;
 }

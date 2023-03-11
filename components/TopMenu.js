@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { slugify } from '@/utils/slugify'
 
 const TopMenu = ({postTopics}) => {
     return (
@@ -8,7 +9,7 @@ const TopMenu = ({postTopics}) => {
         <button className="menubtn topicbtn">Subjects</button>
         <div className="topic-items">
         {postTopics.map((topic) => (
-            <Link key={topic} href={`/subjects/${topic.toLowerCase()}`}>{topic}</Link>
+            <Link key={topic} href={`/subjects/${slugify(topic)}`}>{topic}</Link>
         ))}
         </div>
         </div>

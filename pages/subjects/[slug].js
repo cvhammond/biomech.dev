@@ -1,13 +1,13 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
-import { serialize } from 'next-mdx-remote/serialize'
 import Layout from '@/components/Layout'
 import TopMenu from '@/components/TopMenu'
 import { postTopics, postFilePaths, POSTS_PATH } from '@/utils/mdxUtils'
 import Link from 'next/link'
 import Head from 'next/head'
 import { getTitleAndDescription } from '@/utils/mdxUtils'
+import { slugify } from '@/utils/slugify'
 
 export default function topicPage({ slug, posts, postTopics}) {
     const pageTitle = `${slug} - biomech.dev`
@@ -41,7 +41,7 @@ export const getStaticProps = async ({ params }) => {
     let posts = {}
     let slug = ''
     for (const post of postFilePaths) {
-        if (post.split('/')[0].toLowerCase() == params.slug) {
+        if (slugify(post.split('/')[0]) == params.slug) {
             if (slug == '') {
                 slug = post.split('/')[0]
             }
@@ -51,7 +51,7 @@ export const getStaticProps = async ({ params }) => {
             if (data.title) {
                 posts[data.title] = {
                     description: data.description ?? '',
-                    slug: post.replace('.md', '').toLowerCase(),
+                    slug: post.split('/')[1].replace('.md', '').toLowerCase(),
                 }
             }
         }
@@ -67,7 +67,7 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
     const paths= postTopics().map((topic) => (
-       "/subjects/" + topic.toLowerCase()
+       "/subjects/" + slugify(topic)
     ))
   return {
       paths,

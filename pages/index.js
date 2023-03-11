@@ -8,23 +8,25 @@ import { postTopics } from '../utils/mdxUtils'
 import TopMenu from '../components/TopMenu'
 import Head from 'next/head'
 import { getTitleAndDescription } from '../utils/mdxUtils'
+import { slugify } from '@/utils/slugify'
 
 export default function Index({ posts, postTopics }) {
+    const title = 'Information about biomechanics software and development'
   return (
     <Layout>
       <Head>
-        <title>biomech.dev - Information about biomechanics software</title>
+        <title>biomech.dev - Information about biomechanics software and development</title>
       </Head>
       <TopMenu postTopics={postTopics}/>
       <div className="post-header">
         <h1 className="title"><samp>biomech.dev</samp></h1>
-          <p className="description">Information about biomechanics software</p>
+          <p className="description">{title}</p>
       <hr/>
       </div>
       <main>
       {postTopics.map((topic) => (
           <div key={topic} className="topic-button-container">
-          <Link href={`/subjects/${topic.toLowerCase()}`}>
+          <Link href={`/subjects/${slugify(topic)}`}>
           <button className="topic-button" >
           {topic}
           </button>
@@ -56,7 +58,8 @@ export function getStaticProps() {
         const source = fs.readFileSync(path.join(POSTS_PATH, post))
         const { content } = matter(source)
         const data = getTitleAndDescription(content)
-        posts[post] = { data, filePath: post}
+        const postUrl = post.split('/')[1]
+        posts[post] = { data, filePath: postUrl}
     }
   return { props: { posts, postTopics: postTopics()} }
 }

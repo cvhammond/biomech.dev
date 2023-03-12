@@ -7,13 +7,12 @@ export default function Code(params) {
     const [body, setBody] = React.useState('')
     useEffect(() => {
         Prism.highlightAll()
-    }, [])
+    }, [code])
     useEffect(() => {
         const loadRemote = async () => {
             console.log(body)
             if (!body.startsWith('/')) {setCode(body); return}
             let newBody = await fetch("https://raw.githubusercontent.com/cvhammond/opensim-scripts/main" + body).then(res => res.text())
-            console.log(newBody)
             setCode(newBody)
         }
         loadRemote()

@@ -14,11 +14,11 @@ The bisection method is a root finding approach that bisects the search space on
 
 The bisection method leverages the fact that a root must exist between $x_p$ and $x_n$ to split the search region in half at each iteration. If $x_r$ is negative, then the root cannot exist between $x_r$ and $x_n$ because they are both negative and roots only exist between positive and negative numbers[^1].
 
-[^1]: This of course assumes the distance between $x_r$ and $x_n$ is sufficiently small and the function is sufficiently smooth. Regardless, there must be a root between $x_r$ and $x_p$ in this given example.
+[^1]: This of course assumes the distance between $x_r$ and $x_n$ is sufficiently small, and the function is sufficiently smooth. Regardless, there must be a root between $x_r$ and $x_p$ in this given example.
 
 ## Termination of the Bisection Method
 
-Termination occurs when the error is sufficiently low. In this instance, when the iterative change in $f(x)$ is very very small, then a good approximation can be ound for the location of the root. The method should terminate when $f(x)$ changes by some small number relative to the previous iteration. This can be characterized by the follow:
+Termination occurs when the error is sufficiently low. In this instance, when the iterative change in $f(x)$ is **very** small, then a good approximation can be ound for the location of the root. The method should terminate when $f(x)$ changes by some small number relative to the previous iteration. This can be characterized by the follow:
 
 $$
 err_\% = \frac{x_{\text{r new}} - x_{\text{r old}}}{x_{\text{r old}}}

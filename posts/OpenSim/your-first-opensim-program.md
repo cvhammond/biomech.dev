@@ -22,6 +22,10 @@ test.begin()
 % test
 ```
 
+```matlab
+/mot-from-trc/makeMotFromTrc.m
+```
+
 1. First Item
 2. Second Item
 3. Third Item

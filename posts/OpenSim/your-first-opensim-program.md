@@ -23,7 +23,7 @@ test.begin()
 ```
 
 ```matlab
-/mot-from-trc/makeMotFromTrc.m
+@numerical-methods-py/README.md
 ```
 
 1. First Item

@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import Prism from 'prismjs'
 import Image from 'next/image'
 
+const repoUrl = 'https://raw.githubusercontent.com/cvhammond/'
+const branch = 'main'
+
 export default function Code(params) {
     const [code, setCode] = React.useState('')
     const [body, setBody] = React.useState('')
@@ -11,8 +14,11 @@ export default function Code(params) {
     useEffect(() => {
         const loadRemote = async () => {
             console.log(body)
-            if (!body.startsWith('/')) {setCode(body); return}
-            let newBody = await fetch("https://raw.githubusercontent.com/cvhammond/opensim-scripts/main" + body).then(res => res.text())
+            if (!body.startsWith('@')) {setCode(body); return}
+            let repo = body.split('/')[0].substring(1) + '/'
+            let file = '/' + body.split('/')[1]
+            console.log(repoUrl + repo + branch + file)
+            let newBody = await fetch(repoUrl + repo + branch + file).then(res => res.text())
             setCode(newBody)
         }
         loadRemote()

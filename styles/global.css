@@ -34,7 +34,7 @@ p {
 .wrapper {
     max-width:36rem;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 0 1.5rem 1.5rem;
 }
 
 .post-link {
@@ -187,7 +187,8 @@ main {
 
 .menu {
     background-color: #2b2640;
-    margin-bottom: 24px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .topmenu {

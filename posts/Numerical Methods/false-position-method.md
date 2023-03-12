@@ -21,3 +21,9 @@ x_r = x_p - \frac{f(x_p) * (x_n - x_p)}{f(x_n) - f(x_p)}
 $$
 
 Once $x_r$ is found, we are able to continue with the [bisection method](/bisection-method).
+
+## Implementation
+
+```py example false position method with divide by zero considerations
+@numerical_methods_py/false_position_method.py
+```

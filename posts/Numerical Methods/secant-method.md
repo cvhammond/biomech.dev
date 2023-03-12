@@ -12,3 +12,8 @@ The secant method calculates the slope of the secant as an approximation of the 
 2. Calculate the [iterative error](/error) between $f(x_1)$ and $f(x)$.
 3. If the error is sufficiently small, stop. Otherwise, do another iteration where $x_0 = x_1$ and $x_{-1} = x_0$.
 
+## Implementation
+
+```py example secant method with divide by zero considerations
+@numerical_methods_py/secant_method.py
+```

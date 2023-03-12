@@ -21,3 +21,9 @@ Fixed point iteration is a simple iterative process that stops when the error is
 Fixed point iteration works by making an informed guess of the root, then using that informed guess to guess again, and again... and again.
 
 This method walks along the curve until a root is found, thus it is an *open method*. In instances where the root is far away or non-existant, it will walk along the curve forever. It is important to include checks to stop the algorithm if it has walked too far and has not yet found a root.
+
+## Implementation
+
+```py example fixed point iteration with divide by zero considerations
+@numerical_methods_py/fixed_point_iteration.py
+```

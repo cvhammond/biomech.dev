@@ -17,3 +17,9 @@ Each step of the iteration is as follows:
 3. If the error is sufficiently low, stop. Otherwise, $x_0 = x_1$ and begin the iteration process again.
 
 [^1]: Perhaps determined visually or by another fast but approximate method.
+
+## Implementation
+
+```py example Newton-Raphson method with divide by zero considerations
+@numerical_methods_py/newton_raphson_method.py
+```

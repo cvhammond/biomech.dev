@@ -17,7 +17,6 @@ const Footer = () => {
         </div>
         <address>
         Written and maintained by <a href="https://cvhammond.com">Claire V. Hammond</a><br/>
-
         </address>
         </div>
         </footer>

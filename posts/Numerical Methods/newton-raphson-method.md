@@ -13,7 +13,7 @@ $$
 Each step of the iteration is as follows:
 
 1. Solve for $x_1$ from the given $x_0$. If there is no $x_0$, an intelligent guess should be used[^1].
-2. Determine the [iterative error]() of the iteration.
+2. Determine the [iterative error](/error) of the iteration.
 3. If the error is sufficiently low, stop. Otherwise, $x_0 = x_1$ and begin the iteration process again.
 
 [^1]: Perhaps determined visually or by another fast but approximate method.

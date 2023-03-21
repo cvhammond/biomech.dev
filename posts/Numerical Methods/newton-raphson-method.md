@@ -1,6 +1,6 @@
 # Newton-Raphson Method
 
-The Newton-Raphson method is a first-order root finding method that walks along a curve under a root is found. This technique takes advantage of the slope of the curve to determine the position of the root more effectively than the [fixed point iteration method](/fixed-point-iteration).
+The Newton-Raphson method is a first-order root finding method that walks along a curve until a root is found. This technique takes advantage of the slope of the curve to determine the position of the root more effectively than the [fixed point iteration method](/fixed-point-iteration).
 
 Using a modification of the fixed point iteration method, the function of interest is firstly rearranged such that it can be represented as:
 

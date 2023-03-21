@@ -35,6 +35,7 @@ p {
     max-width:36rem;
     margin: 0 auto;
     padding: 0 1.5rem 1.5rem;
+    font-family: Georgia, serif;
 }
 
 .post-link {
@@ -103,8 +104,8 @@ a:hover {
     color: #7171ab !important;
 }
 
-.code-title {
-
+.code {
+    font-family: Consolas, monaco, monospace;
 }
 
 .title {

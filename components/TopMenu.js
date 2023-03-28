@@ -4,7 +4,7 @@ import { slugify } from '@/utils/slugify'
 const TopMenu = ({postTopics}) => {
     return (
         <div className="menu">
-        <Link className="menubtn" href="/">biomech.dev</Link>
+        <Link className="menubtn" href="/"><samp>biomech.dev</samp></Link>
         <div className="topmenu">
         <button className="menubtn topicbtn">Subjects</button>
         <div className="topic-items">

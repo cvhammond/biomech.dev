@@ -13,7 +13,7 @@ const Footer = () => {
                     <Link href="mailto:claire@biomech.dev"><Image src="/email.svg" alt="Email" width="32" height="32" /></Link>
                 </div>
                 <div className="license-container">
-                    <div>biomech.dev is available under the <Link href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</Link>.
+                    <div><Link className="footer-site-link" href="https://biomech.dev"><samp>biomech.dev</samp></Link> is available under the <Link href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</Link>.
                     </div>
                     <address>
                         Written and maintained by <a href="https://cvhammond.com">Claire V. Hammond</a><br />

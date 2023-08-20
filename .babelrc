@@ -1,8 +1,0 @@
-{
-    "presets": ["next/babel"],
-  "plugins": [
-    ["prismjs", {
-        "languages": ["javascript", "matlab", "python", "markup"],
-    }]
-  ]
-}

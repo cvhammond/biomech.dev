@@ -159,7 +159,7 @@ const config = {
                 copyright: `Copyright © ${new Date().getFullYear()} biomech.dev`,
             },
             colorMode: {
-                defaultMode: 'dark',
+                defaultMode: 'light',
                 disableSwitch: false,
                 respectPrefersColorScheme: false,
             },

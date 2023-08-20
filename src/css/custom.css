@@ -20,6 +20,7 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-footer-logo-max-width: 200px;
+  --ifm-link-color: #555;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 

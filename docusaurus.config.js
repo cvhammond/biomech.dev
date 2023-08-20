@@ -10,8 +10,8 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'biomech.dev',
-    tagline: 'Developing robust and flexible biomechanics software',
-    favicon: 'img/favicon.ico',
+    tagline: 'Developing robust, fast, and flexible biomechanics software',
+    favicon: 'img/logo.ico',
 
     // Set the production url of your site here
     url: 'https://biomech.dev',
@@ -86,12 +86,15 @@ const config = {
                     src: 'img/logo.svg',
                 },
                 items: [
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'tutorialSidebar',
-                        position: 'left',
-                        label: 'Tutorial',
-                    },
+//                    {
+//                        type: 'docSidebar',
+//                        sidebarId: 'tutorialSidebar',
+//                        position: 'left',
+//                        label: 'Documentation',
+//                    },
+                    { to: '/c3dio', label: 'c3dio', position: 'left' },
+                    { to: '/bevy_c3d', label: 'bevy_c3d', position: 'left' },
+                    { to: 'https://github.com/users/cvhammond/projects/1/views/1', label: 'Roadmap', position: 'left' },
                     {
                         type: 'docSidebar',
                         sidebarId: 'notesSidebar',
@@ -100,8 +103,13 @@ const config = {
                     },
                     { to: '/blog', label: 'Blog', position: 'left' },
                     {
-                        href: 'https://github.com/cvhammond/biomech.dev',
-                        label: 'GitHub',
+                        href: 'https://github.com/cvhammond/c3dio',
+                        label: 'c3dio',
+                        position: 'right',
+                    },
+                    {
+                        href: 'https://github.com/cvhammond/bevy_c3d',
+                        label: 'bevy_c3d',
                         position: 'right',
                     },
                 ],
@@ -121,19 +129,19 @@ const config = {
                             },
                         ],
                     },
-                    {
-                        title: 'Community',
-                        items: [
-                            {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/biomech-dev',
-                            },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                            },
-                        ],
-                    },
+//                    {
+//                        title: 'Community',
+//                        items: [
+//                            {
+//                                label: 'Discord',
+//                                href: 'https://discordapp.com/invite/biomech-dev',
+//                            },
+//                            {
+//                                label: 'Twitter',
+//                                href: 'https://twitter.com/docusaurus',
+//                            },
+//                        ],
+//                    },
                     {
                         title: 'More',
                         items: [
@@ -142,7 +150,7 @@ const config = {
                                 to: '/blog',
                             },
                             {
-                                label: 'GitHub',
+                                label: 'Website GitHub',
                                 href: 'https://github.com/cvhammond/biomech.dev',
                             },
                         ],

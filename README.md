@@ -1,41 +1,17 @@
-# Website
+# biomech.dev
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6bbce28d-b3b1-4a06-83c2-decac22b4ae1/deploy-status)](https://app.netlify.com/sites/biomechdev/deploys)
 
-### Installation
+`biomech.dev` is a project to develop advanced biomechanics analysis software for facilitating improved clinical outcomes across many domains.
 
-```
-$ yarn
-```
+## Build
 
-### Local Development
+This website can be cloned and built locally by running:
 
-```
-$ yarn start
-```
+`npm run build` and `npm run serve`.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+---
 
-### Build
+This repository is for the `biomech.dev` website using the [Docusaurus](https://github.com/facebook/docusaurus) framework.
 
-```
-$ yarn build
-```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

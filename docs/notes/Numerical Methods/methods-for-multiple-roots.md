@@ -5,7 +5,7 @@ Sometimes when root finding, there are times where multiple roots occur at the s
 The following issues occur for multiple-root root finding:
 
 1. Many methods rely on the fact that a root exists between two points whose function evaluations are on opposite sides of the x-axis[^1].
-2. Both $f(x)$ and $f'(x)$ converge to zero at multiple-root spots. As a result, methods like the [Newton-Raphson method](/newton-raphson-method) and the [secant method](/secant-method) struggle to converge properly.
+2. Both $f(x)$ and $f'(x)$ converge to zero at multiple-root spots. As a result, methods like the [Newton-Raphson method](newton-raphson-method) and the [secant method](secant-method) struggle to converge properly.
 3. Methods of root finding as significantly more inefficient for multiple root finding scenarios.
 
 [^1]: One side is negative, one side is positive.

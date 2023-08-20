@@ -18,8 +18,8 @@ where $\frac{dy}{dx}$ is the first derivative of the function[^1].
 
 The following are a few methods for numerical differentiation:
 
-- [finite differences](/finite-differences)
-- [Richardson Extrapolation](/richardson-extrapolation)
+- [finite differences](finite-differences)
+- [Richardson Extrapolation](richardson-extrapolation)
 
 ## Unequally Spaced Data
 

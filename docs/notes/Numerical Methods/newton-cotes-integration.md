@@ -27,7 +27,7 @@ The following are concrete implementations of Newton-Cotes integrations. The num
 
 [^1]: I.E. the trapezoid rule uses a first-order polynomial approximation of the integral.
 
-1. [Trapezoidal Rule](/trapezoidal-rule)
-2. [Simpson's 1/3 Rule](/simpons-one-third-rule)
-3. [Simpson's 3/8 Rule](/simpons-three-eigths-rule)
+1. [Trapezoidal Rule](trapezoidal-rule)
+2. [Simpson's 1/3 Rule](simpsons-one-third-rule)
+3. [Simpson's 3/8 Rule](simpsons-three-eigths-rule)
 

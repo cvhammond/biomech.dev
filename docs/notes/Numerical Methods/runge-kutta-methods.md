@@ -16,9 +16,9 @@ where $\phi$ is the estimated slope and $h$ is the step size.
 
 All Runge-Kutta methods use this technique, but they differ on their estimations of the slope at a given point. Simple versions of these techniques include:
 
-- [Euler's Method](/eulers-method)
-- [Heun's Method](/heuns-method)
-- [Midpoint Method](/midpoint-method)
+- [Euler's Method](eulers-method)
+- [Heun's Method](heuns-method)
+- [Midpoint Method](midpoint-method)
 
 ## Runge-Kutta Method
 

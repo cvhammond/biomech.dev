@@ -37,7 +37,7 @@ This error can be reduced by increasing the number of digits stored in memory fo
 
 Instances where approximations are used instead of exact mathematical values cause truncation errors. Such errors can become significant if many, many, many computations are done during a numerical method or computation.
 
-See [error propagation](/error-propagation) for more information.
+See [error propagation](../Numerical Methods/error-propagation) for more information.
 
 ## Total Numerical Error
 

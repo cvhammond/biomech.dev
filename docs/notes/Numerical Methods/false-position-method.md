@@ -1,6 +1,6 @@
 # False Position Method
 
-Taking advantage of the mathematics of similar triangles, the false position method is a root finding technique that iteratively reduces the search space by finding a *false* position of the root as if the function were linear in the search space. It is similar to, but generally more efficient than the [bisection method](/bisection-method).
+Taking advantage of the mathematics of similar triangles, the false position method is a root finding technique that iteratively reduces the search space by finding a *false* position of the root as if the function were linear in the search space. It is similar to, but generally more efficient than the [bisection method](bisection-method).
 
 The false position method is sometimes referred to as the **linear interpolation method**.
 
@@ -20,7 +20,7 @@ $$
 x_r = x_p - \frac{f(x_p) * (x_n - x_p)}{f(x_n) - f(x_p)}
 $$
 
-Once $x_r$ is found, we are able to continue with the [bisection method](/bisection-method).
+Once $x_r$ is found, we are able to continue with the [bisection method](bisection-method).
 
 ## Implementation
 

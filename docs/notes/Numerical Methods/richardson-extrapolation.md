@@ -4,7 +4,7 @@ Similar to Romberg integration, Richardson extrapolation uses two approximations
 
 ## Method
 
-Using our knowledge from [Romberg integration](/romberg-integration), we know that if step sizes $h_1$ is twice the size of $h_2$, then the following formula is true:
+Using our knowledge from [Romberg integration](romberg-integration), we know that if step sizes $h_1$ is twice the size of $h_2$, then the following formula is true:
 
 $$
 D = \frac{4}{3}D(h_2)-\frac{1}{3}D(h_1)

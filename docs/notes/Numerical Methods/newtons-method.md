@@ -4,7 +4,7 @@ Newton's method is an open method for solving unidimensional optimization proble
 
 ## Method
 
-Newton's method is a corollary to the [Newton-Raphson method](/newton-raphson-method). Specifically, for the Newton-Raphson method, the equation:
+Newton's method is a corollary to the [Newton-Raphson method](newton-raphson-method). Specifically, for the Newton-Raphson method, the equation:
 
 $$
 x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}

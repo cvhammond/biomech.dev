@@ -4,7 +4,7 @@ A variation on Euler's method, the midpoint method predicts the value of of the 
 
 ## Method
 
-Following [Euler's Method](/eulers-method) The midpoint equation:
+Following [Euler's Method](eulers-method) The midpoint equation:
 
 $$
 y_{i+1} = y_i + f(x_{i+1/2},\,y_{i+1/2})h

@@ -27,6 +27,6 @@ where:
 - $[Z]$ is the square matrix of $z_i$ expressions
 - $\{E\}$ is the column vector of $e_i$ errors
 
-This matrix equation can then be solved with [gaussian elimination](/gaussian-elimination), LU decomposition, or many other numerical methods.
+This matrix equation can then be solved with [gaussian elimination](gaussian-elimination), LU decomposition, or many other numerical methods.
 
 

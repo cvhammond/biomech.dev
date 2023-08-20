@@ -4,7 +4,7 @@ Multistep methods are a set of methods for solving ordinary differential equatio
 
 ## Multistep Heun's Method
 
-Building on [Heun's Method](/heuns-method), error can be reduced by using:
+Building on [Heun's Method](heuns-method), error can be reduced by using:
 
 $$
 y_{i+1} = y_{i-1} + f(x_i, y_i)2h

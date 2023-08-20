@@ -4,7 +4,7 @@ Building on Simpson's 1/3 rule, the 3/8 rule approximates integration as segment
 
 ## Method
 
-Similar to [Simpson's 1/3 Rule](/simpsons-one-third-rule), a formula is used to approximate the definite integral of a curve between $a$ and $b$. In this case, the formula is derived from a third-order polynomial rather than a second-order polynomial.
+Similar to [Simpson's 1/3 Rule](simpsons-one-third-rule), a formula is used to approximate the definite integral of a curve between $a$ and $b$. In this case, the formula is derived from a third-order polynomial rather than a second-order polynomial.
 
 $$
 I \cong (b-a)\frac{f(x_0) + 3f(x_1) + 3f(x_2) + f(x_3)}{8}

@@ -124,8 +124,8 @@ const config = {
                                 to: '/c3dio',
                             },
                             {
-                                label: 'bevy-c3d',
-                                to: '/bevy-c3d',
+                                label: 'bevy_c3d',
+                                to: '/bevy_c3d',
                             },
                         ],
                     },

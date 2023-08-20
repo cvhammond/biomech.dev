@@ -56,5 +56,5 @@ This will converge correctly, but illustrates the increasing complexity of compu
 
 ### Modified Secant
 
-This author leaves the derivation of the nonlinear system modification of the [secant method](/secant-method) to the reader.
+This author leaves the derivation of the nonlinear system modification of the [secant method](secant-method) to the reader.
 

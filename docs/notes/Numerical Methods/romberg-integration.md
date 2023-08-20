@@ -16,7 +16,7 @@ $$
 I(h_1) + E(h_1) = I(h_2) + E(h_2)
 $$
 
-For the [trapezoidal rule](/trapezoidal-rule), the error is about:
+For the [trapezoidal rule](trapezoidal-rule), the error is about:
 
 $$
 E \cong -\frac{b-a}{12}h^2f''(\xi)
@@ -42,6 +42,6 @@ As a result, four second-order approximations ($k=1$) can be used to find a sixt
 
 ## Error
 
-The main advantage of the Romberg integration method is a massive reduction in computations for the same error as traditional trapezoidal rule or [Simpson's 1/3 rule](/simpsons-one-third-rule) approximations.
+The main advantage of the Romberg integration method is a massive reduction in computations for the same error as traditional trapezoidal rule or [Simpson's 1/3 rule](simpsons-one-third-rule) approximations.
 
 

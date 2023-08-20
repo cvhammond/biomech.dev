@@ -4,7 +4,7 @@ For models where the design parameters are not linear, nonlinear regression tech
 
 ## Gauss-Newton Method
 
-The Gauss-Newton method employs the knowledge gained from [polynomial regression](/polynomial-regression) and [linear least squares](/linear-least-squares) to create a matrix equation that represents a nonlinear regression.
+The Gauss-Newton method employs the knowledge gained from [polynomial regression](polynomial-regression) and [linear least squares](linear-least-squares) to create a matrix equation that represents a nonlinear regression.
 
 The general form of a nonlinear equation can be represented as:
 

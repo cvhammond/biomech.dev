@@ -4,7 +4,7 @@ A polynomial regression is a regression where data is fit against a polynomial o
 
 ## Polynomial Regression Model
 
-Polynomial regression is build upon [linear regression](/linear-regression) and extends it to greater orders[^1].
+Polynomial regression is build upon [linear regression](linear-regression) and extends it to greater orders[^1].
 
 [^1]: A line is a first-order polynomial!
 
@@ -20,4 +20,4 @@ $$
 
 The partial derivative of equation one can be taken for each parameter $a_i$ and a resulting system of equations can be solved using other numerical methods[^2].
 
-[^2]: Like [gaussian elimination](/gaussian-elimination).
+[^2]: Like [gaussian elimination](gaussian-elimination).

@@ -13,7 +13,7 @@ or by multiplying both sides by $x$ and rearranging to solve for $x$.
 Fixed point iteration is a simple iterative process that stops when the error is sufficiently low. Each iteration continues as follows:
 
 1. Find $x_1$ using the reformulation from above. ($x_1 = -sin(x_0)$)
-2. Calculate the [iterative error](/error)
+2. Calculate the [iterative error](../Terminology/error)
 3. If the error is sufficiently small, stop. Otherwise, $x_0 = x_1$ and the next iteration begins, solving for $x_1$ again.
 
 ## How Fixed Point Iteration Works

@@ -4,7 +4,7 @@ Simpson's 1/3 rule is the second-order form of the Newton-Cotes integration form
 
 ## Method
 
-Similar to the [trapezoidal rule](/trapezoidal-rule), the Simpson's 1/3 rule comes down to a series of steps:
+Similar to the [trapezoidal rule](trapezoidal-rule), the Simpson's 1/3 rule comes down to a series of steps:
 
 - split the region from $a$ to $b$ into smaller segments
 - calculate the error of a given segment using the equation:
